@@ -83,6 +83,20 @@ let createOffer = async (MemberId) => {
 
 let createAnswer = async (data) => {
     //console.log("offer received", data)
+    /* //
+    function createCanvas(id){
+        const elem = document.getElementById(id);
+      if( document.getElementsByTagName("canvas").length == 0 )
+      {
+        canvas = faceapi.createCanvasFromMedia(elem)
+        document.getElementById('webcam-container').append(canvas)
+        faceapi.matchDimensions(canvas, {width: elem.scrollWidth, height: elem.scrollHeight})
+      }
+    }//* */
+    
+        createCanvas("user-2");
+    startDetection();
+    
     await createPeerConnection()
 
     await peerConnection.setRemoteDescription(data.offer)
